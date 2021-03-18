@@ -15,7 +15,7 @@
     "install:frontend": "cd app && npm install",
     "lint": "solium --dir ./contracts  --config ../../.soliumrc.json",
     "compile": "truffle compile",
-    "build": "cd app && npm run build",
+    "build": "cd app && npm run build:script:nosourcemap",
     "test": "TRUFFLE_TEST=true npm run test:ganache",
     "test:gas": "GAS_REPORTER=true npm test",
     "test:coverage": "SOLIDITY_COVERAGE=true npm run test:ganache",

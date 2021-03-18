@@ -17,7 +17,7 @@
     "lint": "eslint ./src",
     "sync-assets": "copy-aragon-ui-assets -n aragon-ui ./build && copyfiles -u 1 './public/**/*' ./build",
     "start": "npm run sync-assets && npm run build:script -- --no-minify && parcel serve index.html -p 3001 --out-dir build/",
-    "build": "npm run sync-assets && npm run build:script:nosourcemap && parcel build index.html --out-dir build/ --public-url '.' --no-source-maps",
+    "build": "npm run sync-assets && npm run build:script -- --no-minify --no-source-maps && parcel build index.html --out-dir build/ --no-source-maps",
     "build:script": "parcel build src/script.js --out-dir build/",
     "build:script:nosourcemap": "cross-env NODE_ENV=production parcel build src/script.js --out-dir build/ --no-source-maps"
   },
@@ -42,13 +42,15 @@
     "web3-utils": "^1.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.12.13",
     "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-es2015": "^6.24.1",
     "copyfiles": "^2.1.1",
     "cross-env": "^6.0.2",
     "eslint": "^6.2.2",

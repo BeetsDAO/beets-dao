@@ -33,10 +33,12 @@
     "coverage:batched-bancor-market-maker": "lerna run --scope=@ablack/fundraising-batched-bancor-market-maker --stream test:coverage",
     "coverage:presale": "lerna run --scope=@ablack/fundraising-presale --stream test:coverage",
     "coverage:tap": "lerna run --scope=@ablack/fundraising-tap --stream test:coverage",
-    "publish": "lerna run --scope=@ablack/fundraising-* --concurrency=1 --stream publish"
+    "publish": "lerna run --scope=@ablack/fundraising-* --concurrency=1 --stream publish",
+    "publish:rinkeby": "lerna run --scope=@ablack/fundraising-* --concurrency=1 --stream apm:publish:rinkeby:major"
   },
   "devDependencies": {
     "coveralls": "^3.0.1",
+    "eth-json-rpc-filters": "^4.2.2",
     "lcov-result-merger": "^3.1.0",
     "lerna": "^3.10.3",
     "lerna-update-wizard": "^0.16.0",
